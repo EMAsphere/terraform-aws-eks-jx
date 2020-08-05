@@ -275,3 +275,18 @@ variable "map_users" {
   }))
   default = []
 }
+
+// ----------------------------------------------------------------------------
+// Added for terragrunt integration
+// ----------------------------------------------------------------------------
+variable "cluster_oidc_issuer_url" {
+  type = string
+}
+
+variable "cluster_endpoint" {
+  type = string
+}
+
+variable "cluster_certificate_authority_data" {
+  type = string
+}

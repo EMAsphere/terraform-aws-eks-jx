@@ -53,9 +53,7 @@ module "iam_assumable_role_tekton_bot" {
 
 resource "kubernetes_service_account" "tekton-bot" {
   automount_service_account_token = true
-  depends_on = [
-    null_resource.kubeconfig
-  ]
+
   metadata {
     name      = "tekton-bot"
     namespace = kubernetes_namespace.jx.id
@@ -117,9 +115,7 @@ module "iam_assumable_role_external_dns" {
 
 resource "kubernetes_service_account" "exdns-external-dns" {
   automount_service_account_token = true
-  depends_on = [
-    null_resource.kubeconfig
-  ]
+
   metadata {
     name      = "exdns-external-dns"
     namespace = kubernetes_namespace.jx.id
@@ -190,9 +186,7 @@ module "iam_assumable_role_cert_manager" {
 
 resource "kubernetes_service_account" "cm-cert-manager" {
   automount_service_account_token = true
-  depends_on = [
-    null_resource.kubeconfig
-  ]
+
   metadata {
     name      = "cm-cert-manager"
     namespace = kubernetes_namespace.cert_manager.id
@@ -225,9 +219,7 @@ module "iam_assumable_role_cm_cainjector" {
 
 resource "kubernetes_service_account" "cm-cainjector" {
   automount_service_account_token = true
-  depends_on = [
-    null_resource.kubeconfig
-  ]
+
   metadata {
     name      = "cm-cainjector"
     namespace = kubernetes_namespace.cert_manager.id
@@ -259,9 +251,7 @@ module "iam_assumable_role_controllerbuild" {
 
 resource "kubernetes_service_account" "jenkins-x-controllerbuild" {
   automount_service_account_token = true
-  depends_on = [
-    null_resource.kubeconfig
-  ]
+
   metadata {
     name      = "jenkins-x-controllerbuild"
     namespace = kubernetes_namespace.jx.id
@@ -293,9 +283,7 @@ module "iam_assumable_role_jxui" {
 
 resource "kubernetes_service_account" "jxui" {
   automount_service_account_token = true
-  depends_on = [
-    null_resource.kubeconfig
-  ]
+
   metadata {
     name      = "jxui"
     namespace = kubernetes_namespace.jx.id

@@ -55,6 +55,9 @@ module "cluster" {
   map_accounts              = var.map_accounts
   map_roles                 = var.map_roles
   map_users                 = var.map_users
+  cluster_oidc_issuer_url   = var.cluster_oidc_issuer_url
+  cluster_endpoint          = var.cluster_endpoint
+  cluster_certificate_authority_data = var.cluster_certificate_authority_data
 }
 
 // ----------------------------------------------------------------------------
